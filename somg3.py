@@ -8,8 +8,8 @@ try:
     from yt_dlp import YoutubeDL
 except ModuleNotFoundError as e:
     print("Required modules are not installed in this environment.")
-    raise e
-
+    raise 
+os.system("apt-get install ffmpeg")
 class DownloadManager:
     def __init__(self, ffmpeg_path=None):
         self.ffmpeg_path = ffmpeg_path or shutil.which("ffmpeg")
